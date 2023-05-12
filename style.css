@@ -1,0 +1,22 @@
+:root {
+  font-size: calc(16px * 2);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+label {
+  display: block;
+  text-align: start;
+}
+
+input {
+  font-size: inherit;
+  margin-right: 0.5rem;
+}
