@@ -46,21 +46,11 @@ const clickedCheckbox = document.addEventListener("change", (event) => {
   }*/
 });
 
-/* Warum bleibt clickedCheckbox stets undefined?? */
+/* Warum bleibt clickedCheckbox stets undefined?? 
+weil ein eventListener nichts zurück gibt und 
+eine Funktion die nichts zurück gibt den Wert undefined hat*/
 
 /*
-let listCheckedBoxes = [];
-
-if (clickedCheckbox.checked) {
-    listCheckedBoxes.push()
-
-} else { 
-
-}
-
-
-
-
 const cheapCheckbox = document.querySelector("#cheap");
 cheapCheckbox.addEventListener("change", check(cheapCheckbox));
 
@@ -85,5 +75,4 @@ function check(item) {
     lastChecked = item;
   }
 }
-
 */
