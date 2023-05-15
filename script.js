@@ -19,8 +19,18 @@ document.querySelector("form").addEventListener("change", (event) => {
 
 /* Welche Checkbox wurde geklickt? */
 
-const clickedCheckbox = document.body.addEventListener("change", (event) => {
-  switch (event.target.id) {
+const changeHistory = [];
+
+const clickedCheckbox = document.addEventListener("change", (event) => {
+  if (event.target.checked) {
+    changeHistory.push(event.target);
+  }
+  if (changeHistory.length === 3) {
+    changeHistory[1].checked = false;
+    changeHistory.splice(1, 1);
+  }
+  console.log(changeHistory);
+  /*switch (event.target.id) {
     case "fast":
       console.log(event.target.id);
       console.log("clickedCheckbox: ", clickedCheckbox);
@@ -33,12 +43,10 @@ const clickedCheckbox = document.body.addEventListener("change", (event) => {
       console.log(event.target.id);
       console.log("clickedCheckbox: ", clickedCheckbox);
       break;
-  }
+  }*/
 });
-console.log(
-  "clickedCheckbox: ",
-  clickedCheckbox
-); /* Warum bleibt clickedCheckbox stets undefined?? */
+
+/* Warum bleibt clickedCheckbox stets undefined?? */
 
 /*
 let listCheckedBoxes = [];
